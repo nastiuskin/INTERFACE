@@ -1,0 +1,28 @@
+﻿<Window x:Class="INTERFACE.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:INTERFACE"
+        mc:Ignorable="d"
+        Title="TSI" Height="450" Width="800" Background="Black">
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+        <StackPanel Orientation="Horizontal" Margin="10,10,-10,-26">
+
+            <RadioButton Checked="Button_Checked" Content="Symmetric(DES)" x:Name="SymRadioButton"  Foreground="White"/>
+            <RadioButton Checked="Button_Checked" Content="Asymmetric(RSA)" x:Name="AsymRadioButton" IsChecked="True" Foreground="White"/>
+        </StackPanel>
+        <Label Content="Input Text:" HorizontalAlignment="Left" Margin="178,44,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <TextBox Name="InputTextBox" HorizontalAlignment="Left" Height="30" Margin="10,70,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="400"/>
+
+        <Label Content="Output Text:" HorizontalAlignment="Left" Margin="176,110,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <TextBox Name="OutputTextBox" HorizontalAlignment="Left" Height="30" Margin="10,136,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="400"/>
+
+        <Label Content="Digital Signature:" HorizontalAlignment="Left" Margin="165,174,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <TextBox Name="DSA" HorizontalAlignment="Left" Height="30" Margin="10,200,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="400"/>
+
+        <Button Name="EncryptButton" Click="EncryptButton_Click" Content="Encrypt" HorizontalAlignment="Left" Margin="59,267,0,0" VerticalAlignment="Top" Width="100" Foreground="White" Background="Black"/>
+        <Button Name="DecryptButton" Click="DecryptButton_Click" Content="Decrypt" HorizontalAlignment="Left" Margin="166,267,0,0" VerticalAlignment="Top" Width="100" Foreground="White" Background="Black"/>
+        <Button Name="Reset" Click="Reset_Click"  Content="Reset" HorizontalAlignment="Left" Margin="271,267,0,0" VerticalAlignment="Top" Width="100" Foreground="White" Background="Black"/>
+    </Grid>
+</Window>
